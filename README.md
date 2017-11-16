@@ -23,19 +23,19 @@ RStudio
 - In the console, insert the following code which will return a list of all players and positions on the depth chart:
 
 install.packages("rvest")
-  Installs rvest, a package within RStudio that makes it easy to scrape data from html webpages.
+- Installs rvest, a package within RStudio that makes it easy to scrape data from html webpages.
 library(rvest)
-  Loads the rvest package.
+- Loads the rvest package.
 url <- 'http://subscribers.footballguys.com/apps/depthchart.php?type=noidp&lite=yes&exclude_coaches=yes'
-  Associates "url" with the website to be scraped.
+- Associates "url" with the website to be scraped.
 webpage <- read_html(url)
-  Reads the HTML code from the specified website.
+- Reads the HTML code from the specified website.
 nflplayers_html <- html_nodes(webpage, '.la')
-  Uses the CSS selectors to scrape the sections with class ".la"
+- Uses the CSS selectors to scrape the sections with class ".la"
 nflplayers_text <- html_text(nflplayers_html)  
-  Converts the HTML data into text format.
+- Converts the HTML data into text format.
 nflplayers_text
-  Displays data.
+- Displays data.
 
 Excel
 - Copy and past data from RStudio into excel (in the interest of time)

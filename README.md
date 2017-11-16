@@ -5,6 +5,7 @@
 **Author:** Olina Cavedoni
 
 __*Project Description:*__
+
 As a Fantasy Football Team owner, I need to understand how player data is stored in HTML tables so that I can compile relevant data to eventually use in a weekly player performance predictive model
 
 -   The objective of this first project was to create a code script to automatically retrieve the player names and positions from an online depth chart to use for future projects involving projecting weekly player Fantasy Football points.
@@ -21,11 +22,11 @@ RStudio
 - Open RStudio
 - In the console, insert the following code which will return a list of all players and positions on the depth chart:
 > url <- 'http://subscribers.footballguys.com/apps/depthchart.php?type=noidp&lite=yes&exclude_coaches=yes'
-> webpage <- read_html(url)
-> nflplayers_html <- html_nodes(webpage, '.la')
-> View(nflplayers_html)
-> nflplayers_text <- html_text(nflplayers_html)
-> nflplayers_text
+ webpage <- read_html(url)
+ nflplayers_html <- html_nodes(webpage, '.la')
+ View(nflplayers_html)
+ nflplayers_text <- html_text(nflplayers_html)
+ nflplayers_text
 
 Excel
 - Copy and past data from RStudio into excel (in the interest of time)
